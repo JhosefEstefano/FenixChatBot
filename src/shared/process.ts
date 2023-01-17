@@ -122,7 +122,7 @@ function processMessage(message: string, number: string) {
     models.push(MessageText("No te entendi por favor prueba de nuevo", number));
   }
 
-   
+    
   
 }
 
