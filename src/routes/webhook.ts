@@ -1,9 +1,9 @@
-import { Request, Response, Router } from "express";
+import { Router } from "express";
+import { recivedMessage, verifyToken } from "../controllers/webhook";
 
 const router = Router();
 
-router.get('/', (req: Request,res: Response) => { 
-    res.send({data: "Aqui van los modelos"}); 
-});
+router.get("/", verifyToken);
+router.post("/", recivedMessage)
 
-export {router};
+export { router };
